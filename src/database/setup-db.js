@@ -1,7 +1,7 @@
 import pg, { Query } from "pg";
 const { Client } = pg;
 
-createTableQuery = `CREATE TABLE repositories (
+const createTableQuery = `CREATE TABLE repositories (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   owner TEXT NOT NULL,
