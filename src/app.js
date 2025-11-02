@@ -28,6 +28,8 @@ const app = async () => {
       const repos = await fetchRepositories(segment, 1000, 100);
       totalFetched += repos.length;
       console.log(`Fetched ${repos.length} repos for segment: ${segment}`);
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // 2 seconds
+
     }
     console.log(repos);
     await client.end();
