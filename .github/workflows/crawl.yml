@@ -55,11 +55,10 @@ jobs:
           PGPASSWORD: postgres
         run: |
           sudo apt-get install -y postgresql-client
-          pg_dump -h localhost -U postgres postgres > dump.sql
-
+          pg_dump -h localhost -U postgres postgres > stars.sql
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: database-dump
-          path: dump.sql
+          name: stars-artifact-sql
+          path: stars.sql

@@ -79,7 +79,7 @@ const fetchRepositories = async (limit, batchSize) => {
 
 // Run
 (async () => {
-  const repos = await fetchRepositories(200, 100);
+  const repos = await fetchRepositories(100, 100);
   console.log("\nTop Repositories:");
   repos.forEach((r) =>
     console.log(`${r.owner.login}/${r.name} ⭐ ${r.stargazerCount}`)
